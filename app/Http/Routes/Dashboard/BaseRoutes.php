@@ -44,7 +44,7 @@ class BaseRoutes
             $router->get('admin', 'DashboardController@redirectAdmin');
 
             $router->group(['prefix' => 'dashboard'], function (Registrar $router) {
-                $router->get('/support/systemstatus', [
+                $router->get('/', [
                     'as'   => 'get:dashboard',
                     'uses' => 'DashboardController@showDashboard',
                 ]);
